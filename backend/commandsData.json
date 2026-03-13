@@ -1,0 +1,242 @@
+[
+    {
+        "id": 1,
+        "os": "Windows",
+        "title": "What is NTUSER.DAT?",
+        "problem": "Found a weird 20MB file in my user folder. Can I delete it?",
+        "command": "DO NOT DELETE. It holds your profile's registry settings. Hide it: View Tab > Uncheck 'Hidden items'.",
+        "tags": "windows files registry hidden settings"
+    },
+    {
+        "id": 2,
+        "os": "Universal",
+        "title": "Flush DNS Cache",
+        "problem": "Internet is connected but websites won't load or are showing outdated versions.",
+        "command": "Windows: ipconfig /flushdns | Mac: sudo dscacheutil -flushcache",
+        "tags": "network internet dns flush wifi"
+    },
+    {
+        "id": 3,
+        "os": "Git",
+        "title": "Undo Last Commit (Keep Changes)",
+        "problem": "I committed too early or made a typo in the message, but I don't want to lose my code.",
+        "command": "git reset --soft HEAD~1",
+        "tags": "git github version control undo commit soft"
+    },
+    {
+        "id": 4,
+        "os": "Windows",
+        "title": "Repair Corrupted System Files",
+        "problem": "Windows is crashing, acting weird, or throwing random blue screens.",
+        "command": "Open CMD as Admin and type: sfc /scannow",
+        "tags": "windows crash repair sfc scannow blue screen bsod"
+    },
+    {
+        "id": 5,
+        "os": "Laravel",
+        "title": "Nuke and Rebuild Database",
+        "problem": "Database architecture changed and I need to wipe it clean and run all migrations and seeders from scratch.",
+        "command": "php artisan migrate:fresh --seed",
+        "tags": "php laravel database migrate seed reset backend"
+    },
+    {
+        "id": 6,
+        "os": "Security Tools",
+        "title": "Start OWASP ZAP via Docker",
+        "problem": "Need to run dynamic application security testing (DAST) without installing Java locally.",
+        "command": "docker run -u zap -p 8080:8080 -i owasp/zap2docker-stable zap.sh -daemon -host 0.0.0.0 -port 8080",
+        "tags": "security zap owasp dynamic analysis testing docker"
+    },
+    {
+        "id": 7,
+        "os": "Linux / Mac",
+        "title": "Find What is Using a Port",
+        "problem": "Trying to start a server but getting 'Port 8000 is already in use'.",
+        "command": "lsof -i :8000",
+        "tags": "linux mac port localhost server error in use network"
+    },
+    {
+        "id": 8,
+        "os": "Windows",
+        "title": "Disable Fast Startup (Fixes Hardware Bugs)",
+        "problem": "Laptop battery drains while off, or Bluetooth/Wi-Fi drivers fail to load on boot.",
+        "command": "Control Panel > Power Options > Choose what power buttons do > Uncheck 'Turn on fast startup'.",
+        "tags": "windows settings power battery boot hardware bluetooth"
+    },
+    {
+        "id": 9,
+        "os": "React / Node",
+        "title": "Clean Install Dependencies",
+        "problem": "Node modules are corrupted or packages aren't updating correctly.",
+        "command": "rm -rf node_modules package-lock.json && npm install",
+        "tags": "react node npm modules install broken dependencies frontend"
+    },
+    {
+        "id": 10,
+        "os": "Security Tools",
+        "title": "Run SonarQube Scanner",
+        "problem": "Need to push local source code to SonarQube for static analysis and code smell detection.",
+        "command": "sonar-scanner.bat -D\"sonar.projectKey=my_project\" -D\"sonar.sources=.\"",
+        "tags": "security sonarqube static analysis code smell scan"
+    },
+    {
+        "id": 11,
+        "os": "Windows",
+        "title": "Check and Repair Disk Errors",
+        "problem": "Hard drive is making weird noises, files are corrupted, or Windows is very slow.",
+        "command": "Open CMD as Admin: chkdsk C: /f /r /x",
+        "tags": "windows cmd disk repair chkdsk hard drive storage slow"
+    },
+    {
+        "id": 12,
+        "os": "Windows",
+        "title": "Repair Windows Image (DISM)",
+        "problem": "SFC scan failed to fix corrupted files, or Windows updates are stuck.",
+        "command": "Open CMD as Admin: DISM /Online /Cleanup-Image /RestoreHealth",
+        "tags": "windows cmd repair dism update corrupted system"
+    },
+    {
+        "id": 13,
+        "os": "Windows",
+        "title": "Generate Battery Health Report",
+        "problem": "Laptop battery drains too fast and I want to see its maximum capacity vs original capacity.",
+        "command": "Open CMD: powercfg /batteryreport",
+        "tags": "windows cmd laptop battery power report health"
+    },
+    {
+        "id": 14,
+        "os": "Windows",
+        "title": "See All Active Network Ports",
+        "problem": "Need to know what background programs are using the internet or blocking a development port.",
+        "command": "Open CMD: netstat -ano",
+        "tags": "windows cmd network ports netstat internet listening"
+    },
+    {
+        "id": 15,
+        "os": "Windows",
+        "title": "Force Kill a Frozen Program",
+        "problem": "A program is completely frozen and Task Manager won't close it.",
+        "command": "Open CMD: taskkill /F /IM program_name.exe (e.g., taskkill /F /IM chrome.exe)",
+        "tags": "windows cmd frozen crash taskkill close force"
+    },
+    {
+        "id": 16,
+        "os": "Windows",
+        "title": "Test Internet Connection Stability",
+        "problem": "Internet feels laggy, need to check for packet loss or high ping.",
+        "command": "Open CMD: ping 8.8.8.8 -t (Press Ctrl+C to stop)",
+        "tags": "windows cmd internet ping network lag wifi"
+    },
+    {
+        "id": 17,
+        "os": "Windows",
+        "title": "Find Network Routing Issues",
+        "problem": "A specific website is down but others work. Need to see where the connection drops.",
+        "command": "Open CMD: tracert google.com",
+        "tags": "windows cmd network traceroute drop routing website"
+    },
+    {
+        "id": 18,
+        "os": "Windows",
+        "title": "Get Computer Uptime and Specs",
+        "problem": "Need to quickly check the OS version, RAM, or how long the PC has been running.",
+        "command": "Open CMD: systeminfo",
+        "tags": "windows cmd specs ram uptime version systeminfo"
+    },
+    {
+        "id": 19,
+        "os": "Windows",
+        "title": "Find MAC Address (Physical Address)",
+        "problem": "Need to whitelist the laptop on a secure network or router.",
+        "command": "Open CMD: getmac /v",
+        "tags": "windows cmd mac address network physical whitelist router"
+    },
+    {
+        "id": 20,
+        "os": "Windows",
+        "title": "Detailed IP Configuration",
+        "problem": "Need to find my local IP address, Subnet Mask, or Default Gateway.",
+        "command": "Open CMD: ipconfig /all",
+        "tags": "windows cmd ip gateway subnet network local router"
+    },
+    {
+        "id": 21,
+        "os": "Windows UI",
+        "title": "Show File Extensions",
+        "problem": "Can't tell if a file is an image.png or a dangerous image.png.exe.",
+        "command": "File Explorer > View Tab > Check 'File name extensions'.",
+        "tags": "windows settings file extension hidden security virus"
+    },
+    {
+        "id": 22,
+        "os": "Windows UI",
+        "title": "Edit System Environment Variables (Path)",
+        "problem": "Installed Node, Git, or PHP, but the terminal says the command is not recognized.",
+        "command": "Start Menu > Type 'Environment Variables' > Click 'Environment Variables...' > Edit 'Path'.",
+        "tags": "windows settings environment variables path developer terminal"
+    },
+    {
+        "id": 23,
+        "os": "Windows UI",
+        "title": "Disable Startup Applications",
+        "problem": "Laptop takes 5 minutes to boot up because Spotify, Steam, and Skype launch automatically.",
+        "command": "Ctrl+Shift+Esc (Task Manager) > 'Startup apps' tab > Right-click and 'Disable'.",
+        "tags": "windows settings startup boot slow task manager apps"
+    },
+    {
+        "id": 24,
+        "os": "Windows UI",
+        "title": "Change DNS Server (Faster Browsing)",
+        "problem": "ISP's default DNS is blocking websites or resolving them very slowly.",
+        "command": "Settings > Network & Internet > Wi-Fi > Hardware Properties > Edit DNS > Use 8.8.8.8 and 8.8.4.4",
+        "tags": "windows settings dns network internet fast google"
+    },
+    {
+        "id": 25,
+        "os": "Windows UI",
+        "title": "Enable Clipboard History",
+        "problem": "Copied a new link and lost the password I copied 5 minutes ago.",
+        "command": "Press Win + V > Click 'Turn on'. (Now you can see your last 25 copied items!).",
+        "tags": "windows settings clipboard copy paste history shortcut"
+    },
+    {
+        "id": 26,
+        "os": "Windows UI",
+        "title": "Create a System Restore Point",
+        "problem": "About to edit the registry or install sketchy software and need a safety net.",
+        "command": "Start Menu > Type 'Create a restore point' > Click 'Create...'",
+        "tags": "windows settings backup restore point safety registry"
+    },
+    {
+        "id": 27,
+        "os": "Windows UI",
+        "title": "Clear Temporary System Files",
+        "problem": "C: Drive is completely full for no reason.",
+        "command": "Press Win + R > Type '%temp%' > Press Enter > Delete everything in that folder.",
+        "tags": "windows settings storage temp clear full drive space"
+    },
+    {
+        "id": 28,
+        "os": "Windows UI",
+        "title": "Enable God Mode",
+        "problem": "Tired of digging through menus to find advanced admin settings.",
+        "command": "Create a new folder on Desktop. Name it: GodMode.{ED7BA470-8E54-465E-825C-99712043E01C}",
+        "tags": "windows settings god mode admin control panel advanced"
+    },
+    {
+        "id": 29,
+        "os": "Windows UI",
+        "title": "Boot into Safe Mode",
+        "problem": "Installed a bad graphics driver and now the screen is just black upon booting.",
+        "command": "Hold 'Shift' while clicking 'Restart' from the Start Menu > Troubleshoot > Advanced Options > Startup Settings.",
+        "tags": "windows settings safe mode boot crash driver black screen"
+    },
+    {
+        "id": 30,
+        "os": "Windows UI",
+        "title": "Enable Developer Mode",
+        "problem": "Need to sideload applications or use advanced Windows Subsystem for Linux (WSL) features.",
+        "command": "Settings > Privacy & security > For developers > Toggle 'Developer Mode' On.",
+        "tags": "windows settings developer mode wsl sideload apps"
+    }
+]
